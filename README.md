@@ -15,3 +15,12 @@ curl -X POST http://localhost:8080/compagny -H "Content-Type:application/json" -
 
 curl -X POST "http://localhost:8080/vat/checkvat" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"countryCode\": \"LU\", \"vatNumber\": \"21747447\"}"
 
+
+
+
+## links
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html
+
+https://springfox.github.io/springfox/docs/current/
+

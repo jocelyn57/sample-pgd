@@ -9,6 +9,7 @@
 	<modules>
 		<module>pgd-service</module>
 		<module>pgd-vat-soap-api</module>
+		<module>pgd-admin-console</module>
 	</modules>
 	<packaging>pom</packaging>
 

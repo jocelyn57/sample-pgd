@@ -7,14 +7,14 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 
 
-@RepositoryRestResource( path = "data/employee")
+@RepositoryRestResource( path = "employee")
 public interface EmployeeRepository extends CrudRepository<Employee,Long> {
 
-    public Employee findByLastName(String lastName);
+    public Employee findEmployeeByLastName(String lastName);
 
-    public Employee findByLastNameAndFirstName(String employeeId);
+  //  public Employee findByLastNameAndFirstName(String lastName, String firstName);
 
-    public List<Employee> findAllByAgeBefore(Integer age);
+   // public List<Employee> findAllByAgeBefore(Integer age);
 
 
 
