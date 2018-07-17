@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
@@ -29,12 +31,18 @@ import static org.reflections.util.ConfigurationBuilder.build;
 @SpringBootApplication
 @EnableSwagger2
 //@Import(SpringDataRestConfiguration.class)
-public class SamplePgdApplication {
+public class SamplePgdApplication extends SpringBootServletInitializer {
 
 	private final static Logger LOG = LoggerFactory.getLogger(SamplePgdApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(SamplePgdApplication.class, args);
+	}
+
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(SamplePgdApplication.class);
 	}
 
 
@@ -51,7 +59,6 @@ public class SamplePgdApplication {
 
 
 	public ExitCodeGenerator exitCodeGenerator(){
-		LOG.info("------------> SIGTERM Exit");
 		return ()->42;
 
 	}

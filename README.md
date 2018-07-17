@@ -15,6 +15,7 @@ curl -X POST http://localhost:8080/compagny -H "Content-Type:application/json" -
 
 curl -X POST "http://localhost:8080/vat/checkvat" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"countryCode\": \"LU\", \"vatNumber\": \"21747447\"}"
 
+curl -X POST "http://localhost:8080/service/vat/checkvat" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"countryCode\": \"LU\", \"vatNumber\": \"21747447\"}"
 
 
 
