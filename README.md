@@ -24,3 +24,23 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-tes
 
 https://springfox.github.io/springfox/docs/current/
 
+
+docker build -t abiline/pgd-service .
+docker run -p 8080:8080 -it abiline/pgd-service
+
+avec exec
+
+PID   USER     TIME   COMMAND
+    1 root       0:42 java -Djava.security.egd=file:/dev/./urandom -jar /servic
+   42 root       0:00 sh
+   47 root       0:00 ps
+/ # MdJ:netflix Jocelyn$ 
+
+
+sans
+
+PID   USER     TIME   COMMAND
+    1 root       0:00 sh -c java $JAVA_OPTS -Djava.security.egd=file:/dev/./ura
+    5 root       0:39 java -Djava.security.egd=file:/dev/./urandom -jar /servic
+   42 root       0:00 sh
+   47 root       0:00 ps
