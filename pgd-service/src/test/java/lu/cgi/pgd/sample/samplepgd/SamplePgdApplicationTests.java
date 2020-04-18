@@ -11,6 +11,7 @@ public class SamplePgdApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		// do nothing
 	}
 
 }
